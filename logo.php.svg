@@ -1,0 +1,80 @@
+<?php echo '<?xml version="1.0" standalone="yes"?>'; ?>
+<svg version="1.1" 
+	viewBox="0.0 0.0 720.0 437.0"
+	fill="none"
+	stroke="none"
+	stroke-linecap="square"
+	stroke-miterlimit="10"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g clip-path="url(#p.0)">
+		<!-- Fill cloud -->
+		<path
+			fill="<?php echo $default['cloud']; ?>"
+			d="<?php echo $cloud; ?>"
+			fill-rule="nonzero">
+		</path>
+		<!-- Outline cloud -->
+		<?php if($default['outline']){ ?>
+		<path
+			stroke="#000000" 
+			stroke-width="4.0" 
+			stroke-linejoin="round" 
+			stroke-linecap="butt" 
+			d="<?php echo $cloud; ?>"
+			fill-rule="nonzero">
+		</path>
+		<?php } ?>
+		<!-- Fill first cast -->
+		<path
+			fill="<?php echo $default['cast']; ?>"
+			d="<?php echo $innerCast; ?>"
+			fill-rule="nonzero">
+		</path>
+		<!-- Fill second cast -->
+		<path
+			fill="<?php echo $default['cast']; ?>"
+			d="<?php echo $middleCast; ?>"
+			fill-rule="nonzero">
+		</path>
+		<!-- Fill third cast -->
+		<path
+			fill="<?php echo $default['cast']; ?>"
+			d="<?php echo $outerCast; ?>"
+			fill-rule="nonzero">
+		</path>
+		<!-- Outline first cast -->
+		<?php if($default['outline']){ ?>
+		<path
+			stroke="#000000"
+			stroke-width="4.0"
+			stroke-linejoin="round"
+			stroke-linecap="butt"
+			d="<?php echo $innerCast; ?>"
+			fill-rule="nonzero">
+		</path>
+		<?php } ?>
+		<!-- Outline second cast -->
+		<?php if($default['outline']){ ?>
+		<path 
+			stroke="#000000" 
+			stroke-width="4.0" 
+			stroke-linejoin="round" 
+			stroke-linecap="butt" 
+			d="<?php echo $middleCast; ?>"
+			fill-rule="nonzero">
+		</path>
+		<?php } ?>
+		<!-- Outline third cast -->
+		<?php if($default['outline']){ ?>
+		<path
+			stroke="#000000"
+			stroke-width="4.0"
+			stroke-linejoin="round"
+			stroke-linecap="butt"
+			d="<?php echo $outerCast; ?>"
+			fill-rule="nonzero">
+		</path>
+		<?php } ?>
+	</g>
+</svg>

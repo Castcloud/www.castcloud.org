@@ -44,8 +44,9 @@ $light = array(
 );
 
 $dark = array(
-	'cloud' => '#ddd',
-	'cast' => '#e89c4b',
+	'cloud' => '#fff',
+	'cast2' => '#e89c4b',
+	'cast' => '#0099cc',
 	'outline' => false
 );
 

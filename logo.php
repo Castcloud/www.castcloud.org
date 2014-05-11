@@ -38,8 +38,8 @@ $default = array(
 );
 
 $light = array(
-	'cloud' => '#222',
-	'cast' => '#cf8232',
+	'cloud' => '#000',
+	'cast' => '#0099cc',
 	'outline' => false
 );
 

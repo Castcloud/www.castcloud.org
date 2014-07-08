@@ -1,183 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<title>Castcloud</title>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Castcloud</title>
-	<link href='//fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-	<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
-	<style>
-	* {
-		margin: 0;
-		padding: 0;
-	}
-
-	html, body {
-		height: 100%;
-	}
-
-	body {
-		background: #111;
-		color: #FFF;
-		text-align: center;
-		font-family: Open Sans, sans-serif;
-	}
-
-	#getting-started {		
-		background: #1a1a1a;
-		color: #FFF;
-		width: 100%;
-		padding: 10px 0;
-		padding-bottom: 50px;
-	}
-
-	#getting-started h2 {
-		color: #0099cc;
-	}
-
-	#try {
-		background: #111;
-	}
-
-	#try a {
-		padding: 20px;
-		background: #0066cc;
-		font: bold 20px Lato, sans-serif;
-		display: inline-block;
-		width: 150px;
-		margin: 10px;
-	}
-
-	#try a:hover {
-		background: #0099cc;
-	}
-
-	#try a:active {
-		background: #0066cc;
-	}
-
-	img {
-		max-width: 450px;
-	}
-
-	h1 {
-		font: bold 96px Lato, sans-serif;
-	}
-
-	h2 {
-		font-size: 32px;
-		margin: 1em 0;
-	}
-
-	h3 {
-		margin: 1em 0;
-	}
-
-	p {
-		margin: 1em 0;
-		color: #CCC;
-	}
-
-	pre {
-		padding: 10px;
-		border: 1px solid #333;
-		border-radius: 2px;
-		color: #0099cc;
-		background: #222;
-		overflow: auto;
-	}
-
-	a {
-		color: #FFF;
-		text-decoration: none;
-	}
-
-	.wrap {
-		max-width: 600px;
-		margin: 0 auto;
-		padding: 0 20px;
-		height: 100%;
-	}
+	<meta name="description" content="Your podcast library in the cloud.">
 	
-	.first{
-		min-height: 620px;
-	}
-
-	#links a {
-		display: inline-block;
-		width: 33.333333%;
-		max-width: 150px;
-		margin-top: 30px;
-		padding: 10px 0;
-		font-size: 20px;
-	}
-
-	#links a:hover {
-		color: #0099cc;
-	}
-
-	#links i {
-		display: block;
-	}
-
-	.left {
-		text-align: left;
-	}
-
-	::selection {
-		background: rgba(0,0,0,0.4);
-	}
-
-	@media all and (max-width: 470px) {
-		h1 {
-			font-size: 64px;
-		}
-
-		.first{
-			min-height: 460px;
-		}
-
-		#links a {
-			font-size: 16px;
-			margin-top: 20px;
-		}
-	}
-
-	@media all and (max-width: 330px) {
-		h1 {
-			font-size: 48px;
-		}
-		
-		.first{
-			min-height: 410px;
-		}
-
-		#links a {
-			font-size: 14px;
-			margin-top: 10px;
-		}
-	}
-
-	.cf:before,
-	.cf:after {
-	    content: " ";
-	    display: table;
-	}
-
-	.cf:after {
-	    clear: both;
-	}
-
-	.cf {
-	    *zoom: 1;
-	}
-	</style>
+	<link href='http://fonts.googleapis.com/css?family=Lato:700|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
 </head>
 <body>
 	<div class="wrap first">
-		<div class="vertical">
-			<img src="http://www.castcloud.org/logo.php?schema=dark">
+		<div>
+			<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJ5ZXMiPz48c3ZnIHZlcnNpb249IjEuMSIgDQoJdmlld0JveD0iMC4wIDAuMCA3MjAuMCA0MzcuMCINCglmaWxsPSJub25lIg0KCXN0cm9rZT0ibm9uZSINCglzdHJva2UtbGluZWNhcD0ic3F1YXJlIg0KCXN0cm9rZS1taXRlcmxpbWl0PSIxMCINCgl4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciDQoJeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPg0KCTxnIGNsaXAtcGF0aD0idXJsKCNwLjApIj4NCgkJPCEtLSBGaWxsIGNsb3VkIC0tPg0KCQk8cGF0aA0KCQkJZmlsbD0iI2ZmZiINCgkJCWQ9Im05MCAyMzANCgljMCAwIDAgLTEyNSAxNjUgLTEyNQ0KCWMwIDAgMTU4IDAgMTUwIDg3DQoJYzAgMCAzIC0yIDE1IC0yDQoJYzAgMCAxMTAgMCAxMTAgMTA1DQoJYzAgMCAwIDExMCAtMTEwIDEwNQ0KCWwtMzMwIDANCgljMCAwIC03NSAwIC03NSAtODUNCgljMCAwIDAgLTc1IDc1IC04NQ0KCXoiDQoJCQlmaWxsLXJ1bGU9Im5vbnplcm8iPg0KCQk8L3BhdGg+DQoJCTwhLS0gT3V0bGluZSBjbG91ZCAtLT4NCgkJCQk8IS0tIEZpbGwgZmlyc3QgY2FzdCAtLT4NCgkJPHBhdGgNCgkJCWZpbGw9IiMwMDk5Y2MiDQoJCQlkPSJtNDIwIDEzMA0KCWMwIDAgMTY3IDAgMTY3IDE2Nw0KCWwtMzIgMA0KCWMwIDAgMCAtMTM1IC0xMzUgLTEzNQ0KCXoiDQoJCQlmaWxsLXJ1bGU9Im5vbnplcm8iPg0KCQk8L3BhdGg+DQoJCTwhLS0gRmlsbCBzZWNvbmQgY2FzdCAtLT4NCgkJPHBhdGgNCgkJCWZpbGw9IiMwMDk5Y2MiDQoJCQlkPSJtNDIwIDY4DQoJYzAgMCAyMjkgMCAyMjkgMjI5DQoJbC0zMiAwDQoJYzAgMCAwIC0xOTcgLTE5NyAtMTk3DQoJeiINCgkJCWZpbGwtcnVsZT0ibm9uemVybyI+DQoJCTwvcGF0aD4NCgkJPCEtLSBGaWxsIHRoaXJkIGNhc3QgLS0+DQoJCTxwYXRoDQoJCQlmaWxsPSIjMDA5OWNjIg0KCQkJZD0ibTQyMCA2DQoJYzAgMCAyOTEgMCAyOTEgMjkxDQoJbC0zMiAwDQoJYzAgMCAwIC0yNTkgLTI1OSAtMjU5DQoJeiINCgkJCWZpbGwtcnVsZT0ibm9uemVybyI+DQoJCTwvcGF0aD4NCgkJPCEtLSBPdXRsaW5lIGZpcnN0IGNhc3QgLS0+DQoJCQkJPCEtLSBPdXRsaW5lIHNlY29uZCBjYXN0IC0tPg0KCQkJCTwhLS0gT3V0bGluZSB0aGlyZCBjYXN0IC0tPg0KCQkJPC9nPg0KPC9zdmc+DQo=">
 			<h1>Castcloud</h1>
 			<div id="links" class="cf">
 				<a href="https://github.com/Castcloud/Castcloud">
@@ -185,7 +22,8 @@
 				</a><a href="docs.html">
 					<i class="fa fa-book fa-3x"></i>Docs
 				</a><a href="https://github.com/Castcloud/Castcloud/archive/master.zip">
-					<i class="fa fa-download fa-3x"></i>Download</a>
+					<i class="fa fa-download fa-3x"></i>Download
+				</a>
 			</div>
 		</div>
 	</div>
@@ -193,42 +31,17 @@
 	<div id="getting-started">
 		<div class="wrap">
 			<h2>Getting Started</h2>
-
 			<div class="left">
 				<h3>Backend setup</h3>
-				<p>
-					Download our backend implementation and upload it to your webserver.
-				</p>
+				<p>Download our backend implementation and upload it to your webserver.</p>
 				<pre>git clone https://github.com/Castcloud/Castcloud.git</pre>
-				<p>
-					Go to example.com/management to run the install script.
-					This will also create your administrator user.
-					You are now ready to go. 
-				</p>
+				<p>Go to example.com/management to run the install script. This will also create your administrator user. You are now ready to go.</p>
 			</div>
 		</div>
 	</div>
 
 	<div id="try">
-		<div class="wrap">
-			<a href="http://api.castcloud.org/client">Try it</a>
-		</div>
+		<a href="client">Try it</a>
 	</div>
-
-	<div>
-	</div>
-
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script>
-	$(function() {
-		$(".vertical").css("padding-top", ($(".first").height() / 2 - $(".vertical").height() / 2) + "px");
-		$("img").load(function() {
-			$(".vertical").css("padding-top", ($(".first").height() / 2 - $(".vertical").height() / 2) + "px");
-		});
-		$(window).resize(function() {
-			$(".vertical").css("padding-top", ($(".first").height() / 2 - $(".vertical").height() / 2) + "px");
-		});
-	});
-	</script>
 </body>
 </html>

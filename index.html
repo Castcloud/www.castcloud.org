@@ -21,8 +21,14 @@
 					<i class="fa fa-github fa-3x"></i>Github
 				</a><a href="docs.html">
 					<i class="fa fa-book fa-3x"></i>Docs
-				</a><a href="https://github.com/Castcloud/Castcloud/archive/master.zip">
-					<i class="fa fa-download fa-3x"></i>Download
+				</a><a href="client">
+					<i class="fa fa-arrow-circle-o-right fa-3x"></i>Client
+				</a></a><a href="https://github.com/Castcloud/castcloud-php-server/archive/master.zip">
+					<i class="fa fa-download fa-2x"></i>Get backend
+				</a></a></a><a href="https://github.com/Castcloud/castcloud-js-client/archive/master.zip">
+					<i class="fa fa-download fa-2x"></i>Get client
+				</a></a></a><a href="management">
+					<i class="fa fa-cogs fa-2x"></i>Management
 				</a>
 			</div>
 		</div>
@@ -35,10 +41,15 @@
 		<div class="wrap">
 			<h2>Getting Started</h2>
 			<div class="left">
-				<h3>Backend setup</h3>
-				<p>Download our backend implementation and upload it to your webserver.</p>
-				<pre>git clone https://github.com/Castcloud/Castcloud.git</pre>
-				<p>Go to example.com/management to run the install script. This will also create your administrator user. You are now ready to go.</p>
+				<h3>PHP Backend</h3>
+				<p>Clone our backend implementation to your webserver.</p>
+				<pre>git clone https://github.com/Castcloud/castcloud-php-server.git</pre>
+				<p>Go to example.com/management to run the install script. This will also create your administrator user.</p>
+				<p>Edit your crontab</p>
+				<pre>crontab -e</pre>
+				<p>Add</p>
+				<pre>*/15 * * * *	php /your/web/root/api/crawler.php</pre>
+				<p> You are now ready to go.</p>
 			</div>
 		</div>
 	</div>

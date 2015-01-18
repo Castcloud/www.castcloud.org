@@ -15,44 +15,6 @@ body {
     font-family: Open Sans, sans-serif;
 }
 
-#getting-started {
-    background: #1a1a1a;
-    color: #FFF;
-    width: 100%;
-    padding: 10px 0;
-    padding-bottom: 50px;
-}
-
-#getting-started h2 {
-    color: #0099cc;
-}
-
-#try {
-    background: #111;
-}
-
-#try a {
-    padding: 20px;
-    background: #0066cc;
-    font: bold 20px Lato, sans-serif;
-    display: inline-block;
-    width: 150px;
-    margin: 10px;
-}
-
-#try a:hover {
-    background: #0099cc;
-}
-
-#try a:active {
-    background: #0066cc;
-}
-
-img {
-    width: 100%;
-    max-width: 450px;
-}
-
 h1 {
     font: bold 96px Lato, sans-serif;
 }
@@ -68,7 +30,7 @@ h3 {
 
 p {
     margin: 1em 0;
-    color: #CCC;
+    color: #AAA;
 }
 
 pre {
@@ -83,6 +45,27 @@ pre {
 a {
     color: #FFF;
     text-decoration: none;
+}
+
+img {
+    width: 100%;
+    max-width: 450px;
+}
+
+#getting-started {
+    background: #1a1a1a;
+    color: #FFF;
+    width: 100%;
+    padding: 10px 0;
+    padding-bottom: 50px;
+}
+
+#getting-started h2 {
+    color: #0099cc;
+}
+
+#getting-started a:hover {
+    color: #0099cc;
 }
 
 .wrap {
